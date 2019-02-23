@@ -3,7 +3,10 @@
   <Menu>
 
   </Menu>
-
+  <div>
+  <p>experiencias
+  </p>
+  </div>
   </div>
 </template>
 
@@ -15,8 +18,25 @@ export default {
   name: 'app',
   components: {
     HelloWorld, Menu
-  }
-}
+  },
+  data() {
+    return {
+    usuarios: "",
+    experiencias:[
+      {
+        nombre: "Inicio"
+
+      },
+      {
+        nombre: "Eventos"
+      },
+      {
+        nombre:"Alquiler"
+      }
+    ]       
+    }
+  },
+};
 </script>
 
 <style>
