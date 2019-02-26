@@ -1,12 +1,14 @@
 <template>
   <div id="app">
   <Menu>
-
   </Menu>
-  <div>
-  <p>experiencias
-  </p>
+   <div v-for="(item,index) in experiencias" ::key="index" >
+   <h1>item.nombre</h1>
+   
   </div>
+    
+  </div>
+
   </div>
 </template>
 
@@ -14,29 +16,19 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Menu from './components/Menu.vue'
 
+
+
 export default {
   name: 'app',
   components: {
-    HelloWorld, Menu
-  },
-  data() {
-    return {
-    usuarios: "",
-    experiencias:[
-      {
-        nombre: "Inicio"
+    HelloWorld, Menu,
+    
+  }
+  
+  }
+  
 
-      },
-      {
-        nombre: "Eventos"
-      },
-      {
-        nombre:"Alquiler"
-      }
-    ]       
-    }
-  },
-};
+ 
 </script>
 
 <style>
@@ -47,5 +39,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+};
+.experiencias{
+  background-color: blue;
 }
 </style>
