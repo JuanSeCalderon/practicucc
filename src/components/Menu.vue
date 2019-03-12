@@ -1,19 +1,19 @@
 <template>
   <div class="cont-menu">
 
-    <router-link to="/Inicio">
+    <router-link style="text-decoration:none" to="/Inicio">
       <p>Inicio</p>
     </router-link>
 
-    <router-link to="/Eventos">
+    <router-link style="text-decoration:none" to="/Eventos">
       <p>Eventos</p>
     </router-link>
     
-    <router-link to="/Galeria">
+    <router-link style="text-decoration:none" to="/Galeria">
       <p>Galeria</p>
     </router-link>
 
-    <router-link to="/Contacto">
+    <router-link style="text-decoration:none" to="/Contacto">
       <p>Contacto</p>
     </router-link>
 
@@ -36,7 +36,7 @@ export default {
   background-color: #C0C4CC;
 }
 .cont-menu {
-  max-width: 1000px;
+  max-width: 100%;
   width: 100%;
   display: flex;
   height: 60px;
