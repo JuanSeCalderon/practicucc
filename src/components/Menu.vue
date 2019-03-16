@@ -1,6 +1,6 @@
 <template>
   <div class="cont-menu">
-
+<!--
     <router-link style="text-decoration:none" to="/Inicio">
       <p>Inicio</p>
     </router-link>
@@ -15,7 +15,7 @@
 
     <router-link style="text-decoration:none" to="/Contacto">
       <p>Contacto</p>
-    </router-link>
+    </router-link> -->
 
   </div>
 
@@ -30,7 +30,7 @@ export default {
   }
 };
 </script>
-
+<!--
 <style scoped>
 .cont-menu {
   background-color: #C0C4CC;
@@ -44,4 +44,4 @@ export default {
   align-items: center;
   margin: 0 auto;
 }
-</style>
+</style>-->
