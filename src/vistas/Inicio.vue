@@ -1,8 +1,9 @@
 <template>  
+
 <div>
 <b-navbar class="navbar fixed-top" toggleable="md" type="dark" variant="dark">
       <b-navbar-toggle target="nav_collapse"/>
-      <b-navbar-brand :to="{name:'Inicio'}" id="logo"> Casa LogiEventos</b-navbar-brand>
+      <b-navbar-brand :to="{name:'Inicio'}" id="logo"> Casa Logieventos</b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
@@ -10,19 +11,22 @@
           <b-nav-item :to="{name:'Eventos'}" class="Letranavbar">Eventos</b-nav-item>
           <b-nav-item :to="{name:'Galeria'}" class="Letranavbar">Galeria</b-nav-item>
           <b-nav-item :to="{name:'Contacto'}" class="Letranavbar">Contacto</b-nav-item>
+          
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
+           <b-collapse is-nav class="nav_collapse">
+            <a href="https://www.facebook.com/bodaslogieventos/" target="_blank"><img alt="FanPage Casa Logieventos" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=32 height=32  /></a>&nbsp;&nbsp;&nbsp;
+            <a href="https://www.instagram.com/logieventos/?hl=es-la" target="_blank"><img alt="Insta Casa Logieventos" src="https://lh5.googleusercontent.com/-2cd4qn_7yDs/UIqEfqncDaI/AAAAAAAABfw/qhUaWfiH7DU/s32/instagram32.png" width=32 height=32  /></a>&nbsp;&nbsp;&nbsp;
+            <a href="https://api.whatsapp.com/send?phone=573143182893&text=Hola,%20quisiera%20alquilar%20un%20servicio%20de%20eventos" target="_blank"><img alt="Whatsapp Casa Logieventos" src="../assets/WhatsApp.png" width=32 height=32  /></a>&nbsp;&nbsp;
+          
+
           <b-nav-form>
             <b-form-input size="sm" class="mr-sm-2 buscarcuadro" type="text" placeholder="Buscar"/>
-            <b-nav-item :to="{name:'buscar'}" size="sm" class="my-2 my-sm-0">
+            <b-nav-item :to="{name:'Buscar'}" size="sm" class="Letranavbar">Buscar</b-nav-item>
               <i class="fas fa-search"></i>
-            </b-nav-item>
           </b-nav-form>
 
-          <b-collapse is-nav class="nav_collapse">
-            <b-nav-item :to="{name:'carrito'}">
-              <i class="fas fa-shopping-bag"></i>
-            </b-nav-item>
+         
 
             <b-nav-item @click="showModal">
               <i class="fas fa-user"></i>
@@ -132,13 +136,18 @@
   <div>
   <b-carousel
     id="carousel-fade"
-    style="text-shadow: 0px 0px 2px #000"
-    fade
-    indicators
-    img-width="1024"
-    img-height="480"
-  >
-    <b-carousel-slide caption="First slide" img-src="https://picsum.photos/1024/480/?image=10" />
+    style="text-shadow: 1px 1px 2px #333;"
+      controls
+      indicators
+      background="#ababab"
+      :interval="4000"
+      img-width="1024"
+      img-height="480"
+      v-model="slide"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
+    <b-carousel-slide caption="First slide" :img-src="require('../assets/imagen1.jpg')"/>
     <b-carousel-slide caption="Second Slide" img-src="https://picsum.photos/1024/480/?image=12" />
     <b-carousel-slide caption="Third Slide" img-src="https://picsum.photos/1024/480/?image=22" />
     <b-carousel-slide caption="Four slide" img-src="https://picsum.photos/1024/480/?image=10" />
@@ -163,26 +172,25 @@ Todo nuestro trabajo está orientado a cumplir con las exigencias de los cliente
  <hr style="color: black;" noshade="noshade" width="100%"/>
 
   <div class="mt-4">
-    <h4>Left and Right (or Start and End)</h4>
-    <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-left class="mb-3">
+    <h2>Planes exclusivos</h2>
+    <b-card :img-src="require('../assets/fiestaa.png')" img-alt="Card image" img-left class="mb-3">
       <b-card-text>
         Some quick example text to build on the card and make up the bulk of the card's content.
       </b-card-text>
     </b-card>
 
-    <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-right>
+    <b-card :img-src="require('../assets/empresa.png')" img-alt="Card image" img-right>
       <b-card-text>
         Some quick example text to build on the card and make up the bulk of the card's content.
       </b-card-text>
     </b-card>
 
-    <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-left class="mb-3">
+    <b-card :img-src="require('../assets/recordatorio.png')" img-alt="Card image" img-left class="mb-3">
       <b-card-text>
         Some quick example text to build on the card and make up the bulk of the card's content.
       </b-card-text>
     </b-card>
   </div>
-
  <hr style="color: black;" noshade="noshade" width="100%"/>
  <br>
  <br>
@@ -200,34 +208,44 @@ Todo nuestro trabajo está orientado a cumplir con las exigencias de los cliente
 
   <tr>
 
-    <td><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbodaslogieventos%2Fvideos%2F2075732152682428%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></td>
+    <td><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbodaslogieventos%2Fvideos%2F1945084715747173%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></td>
 
     <td><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbodaslogieventos%2Fvideos%2F2184693985115111%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></td>
 
   </tr>
 
 </table>
+<footer class="app-footer">
+  <div>
+    <a href="https://coreui.io">CoreUI</a>
+    <span>&copy; 2018 creativeLabs.</span>
+  </div>
+  <div class="ml-auto">
+    <span>Powered by</span>
+    <a href="https://coreui.io">CoreUI</a>
+  </div>
+</footer>
  </div>
 </template>
 
-<style>
+<script>
 
-  .el-carousel__item h3 {
-    color: #475669;
-    font-size: 18px;
-    opacity: 0.75;
-    line-height: 300px;
-    margin: 0;
-  }
-
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
+  export default {
+    data() {
+      return {
+        slide: 0,
+        sliding: null
+      }
+    },
+    methods: {
+      onSlideStart(slide) {
+        this.sliding = true
+      },
+      onSlideEnd(slide) {
+        this.sliding = false
+      }
+    }
+    
   }
   
-</style>
-
-
+</script>

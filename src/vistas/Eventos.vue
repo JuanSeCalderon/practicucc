@@ -1,5 +1,8 @@
 <template>
 <div>
+<template>
+  <b-breadcrumb :items="items" />
+</template>
  <b-navbar class="navbar fixed-top" toggleable="md" type="dark" variant="dark">
       <b-navbar-toggle target="nav_collapse"/>
     <b-navbar-toggle target="nav_collapse" />
