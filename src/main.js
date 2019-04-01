@@ -33,3 +33,5 @@ class Slider {
     this.bindEvents();
   }
 }
+
+
