@@ -3,14 +3,14 @@
 <div>
 <b-navbar class="navbar fixed-top" toggleable="md" type="dark" variant="dark">
       <b-navbar-toggle target="nav_collapse"/>
-      <b-navbar-brand :to="{name:'Inicio'}" id="logo"> Casa Logieventos</b-navbar-brand>
+      <b-navbar-brand :to="{name:'Inicio'}" id="logo" class="nameInicio"> Casa Logieventos</b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item :to="{name:'Eventos'}" > </b-nav-item>
-          <b-nav-item :to="{name:'Eventos'}" >Eventos</b-nav-item>
-          <b-nav-item :to="{name:'Galeria'}" >Galeria</b-nav-item>
-          <b-nav-item :to="{name:'Contacto'}" >Contacto</b-nav-item>
+          <b-nav-item :to="{name:'Eventos'}" class="nameroute" >Eventos</b-nav-item>
+          <b-nav-item :to="{name:'Galeria'}" class="nameroute" >Galeria</b-nav-item>
+          <b-nav-item :to="{name:'Contacto'}" class="nameroute" >Contacto</b-nav-item>
           
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
@@ -22,7 +22,7 @@
 
           <b-nav-form>
             <b-form-input size="sm" class="mr-sm-2 buscarcuadro" type="text" placeholder="Buscar"/>
-            <b-nav-item :to="{name:'Buscar'}" size="sm" class="Letranavbar">Buscar</b-nav-item>
+            <b-nav-item :to="{name:'Buscar'}" size="sm" class="nameroute">Buscar</b-nav-item>
               <i class="fas fa-search"></i>
           </b-nav-form>
 
@@ -151,56 +151,76 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-    <b-carousel-slide caption="First slide" class="ImgTamaño" :img-src="require('../assets/imagen1.jpg')"/>
-    <b-carousel-slide caption="Second Slide" class="ImgTamaño" :img-src="require('../assets/imagen 2.jpg')"/>
-    <b-carousel-slide caption="Third Slide" class="ImgTamaño" :img-src="require('../assets/imagen 3.jpg')"/>
-    <b-carousel-slide caption="Four slide" class="ImgTamaño" :img-src="require('../assets/imagen 4.jpg')"/>
-    <b-carousel-slide caption="Five Slide" class="ImgTamaño" :img-src="require('../assets/imagen 5.jpg')"/>
-    <b-carousel-slide caption="Six Slide" class="ImgTamaño" :img-src="require('../assets/imagen 6.jpg')"/>
+    <b-carousel-slide caption="First slide" class="ImgTamaño" :img-src="require('../assets/Imagen 1.jpg')"/>
+    <b-carousel-slide caption="Second Slide" class="ImgTamaño" :img-src="require('../assets/Imagen2.png')"/>
+    <b-carousel-slide caption="Third Slide" class="ImgTamaño" :img-src="require('../assets/Imagen 3.jpg')"/>
+    <b-carousel-slide caption="Four slide" class="ImgTamaño" :img-src="require('../assets/Imagen4.png')"/>
+    <b-carousel-slide caption="Five Slide" class="ImgTamaño" :img-src="require('../assets/Imagen 7.jpg')"/>
+    <b-carousel-slide caption="Six Slide" class="ImgTamaño" :img-src="require('../assets/Imagen 6.jpg')"/>
+    <b-carousel-slide caption="Seven Slide" class="ImgTamaño" :img-src="require('../assets/Imagen5.png')"/>
   </b-carousel>
 </div>
 <div>
 
 </div>
  <hr style="color: black;" noshade="noshade" width="100%"/>
- <h2>Nuestras experiencias</h2>
- <p>
- Somos una Empresa dedicada a la organización de eventos tales como fiestas infantiles, 15 años, bodas, aniversarios y eventos empresariales.
+ <h2 class="letraTitulo">Una breve Reseña historica</h2>
+<p class="texto" >Casa Logieventos fue fundada en 2007 de la mano de una pareja emprendedora siendo los dueños  Mary Rojas y Jhon Alexander Babativa como empresa pionera de la ciudad de Villavicencio, Meta con especialidad en eventos lucrativos.
+<p>
+Cuenta con un equipo profesional y muy bien formado para garantizar un servicio de calidad a la altura del evento. </p>
+<p>Somos perfeccionistas, cercanos y detallistas. Nos gustan las cosas bien hechas y sobre todo; hechas con amor, por lo que dejamos la huella de satisfacción en cada evento para conseguir la felicidad máxima de nuestros clientes.</p>
 
-Casa Logieventos tiene  una trayectoria de 9 años de experiencia.
-
-
-Todo nuestro trabajo está orientado a cumplir con las exigencias de los clientes que buscan la exclusividad en el diseño para sus eventos 
- </p>
- <br>
- <b-button variant="outline-info">Contactanos ya!</b-button>
+ <b-nav-item :to="{name:'Contacto'}" ><b-button variant="outline-info" class="letraTitulo" >Contactanos ya!</b-button></b-nav-item>
 <br>
  <hr style="color: black;" noshade="noshade" width="100%"/>
 
   <div class="mt-4">
-    <h2>Planes exclusivos</h2>
-    <b-card :img-src="require('../assets/fiestaa.png')" img-alt="Card image" img-left class="mb-3">
-      <b-card-text>
-        Some quick example text to build on the card and make up the bulk of the card's content.
-      </b-card-text>
+    <h2 class="letraTitulo" >Calidad y servicios</h2>
+    <b-card :img-src="require('../assets/fiestaa.png')" img-alt="Card image" img-left class="mb-3" footer-text-variant>
+      <b-card-text class="texto" >
+      Podemos ayudarlos con cualquier fiesta que vaya a organizar, ajustándonos a sus gustos y presupuestos, siempre asistidos por un equipo profesional que está a disposición 24/7 para nuestros clientes.
+</b-card-text>
+<ul align="left" class="texto">
+<li type="square">Bautizos</li>
+<li type="square">Baby Showers</li>
+<li type="square">Comuniones</li>
+<li type="square">Cumpleaños</li>
+<li type="square">Fiestas temáticas</li>
+</ul>
     </b-card>
 
-    <b-card :img-src="require('../assets/empresa.png')" img-alt="Card image" img-right>
-      <b-card-text>
-        Some quick example text to build on the card and make up the bulk of the card's content.
+    <b-card :img-src="require('../assets/empresa.png')" img-alt="Card image" img-right class="mb-3">
+      <b-card-text class="texto">
+        Ofrecemos un servicio completo de organización tanto integral como parcial de todo lo necesario para este servicio
+        
       </b-card-text>
+   <ul align="left" class="texto">
+<li type="square">Material audiovisual y técnico</li>
+<li type="square">Restauración</li>
+<li type="square">Meseros</li>
+<li type="square">Buffe</li>
+<li type="square">Eventos coporativos</li>
+</ul> 
     </b-card>
 
-    <b-card :img-src="require('../assets/recordatorio.png')" img-alt="Card image" img-left class="mb-3">
-      <b-card-text>
-        Some quick example text to build on the card and make up the bulk of the card's content.
+    <b-card :img-src="require('../assets/recordatorio.png')" img-alt="Card image" img-left class="mb-4">
+      <b-card-text class="texto">
+        El primer paso está claro y la decisión tomada. A partir de este momento, las dudas y dificultades aparecen al enfrentaros a un tema ajeno a nosotros.
+Queremos ofrecerles la ayuda necesaria para facilitar todos los pasos a seguir y conseguir captar la idea que tienes en mente para plasmarla el mejor momento de dicho recuerdo.
+Ofrecemos nuestro servicio más completo para que partamos del punto que sea donde se encuentre dichos sentimientos y podamos crearla junto a ustedes de manera única y perfecta.
+
       </b-card-text>
+   <ul align="left" class="texto">
+<li type="square">Aniversarios</li>
+<li type="square">Graduaciones</li>
+<li type="square">Jubilaciones</li>
+<li type="square">Bodas</li>
+</ul> 
     </b-card>
   </div>
  <hr style="color: black;" noshade="noshade" width="100%"/>
  <br>
- <br>
- <h2 align="center">Nuestro trabajo</h2>
+ <h2 align="center" class="letraTitulo">Actividades realizadas</h2>
  <br>
  <br>
  <table class="egt" align="center" width="100%" >
@@ -221,17 +241,10 @@ Todo nuestro trabajo está orientado a cumplir con las exigencias de los cliente
   </tr>
 
 </table>
-<footer class="app-footer">
-  <div>
-    <a href="https://coreui.io">CoreUI</a>
-    <span>&copy; 2018 creativeLabs.</span>
-  </div>
-  <div class="ml-auto">
-    <span>Powered by</span>
-    <a href="https://coreui.io">CoreUI</a>
-  </div>
-</footer>
- </div>
+<div class="foster">
+Aqui viene el pie de pagina 
+</div>
+ </div> 
 </template>
 
 <script scope>
@@ -257,7 +270,35 @@ Todo nuestro trabajo está orientado a cumplir con las exigencias de los cliente
 </script>
 <style scoped>
 .ImgTamaño {
-  height: 500px;
+  height: 590px;
 
 }
+.mb-3{
+  height: 230px;
+  
+}
+.mb-4{
+  height: 235px;
+}
+.nameroute {
+font-family: Century Gothic, sans-serif;
+}
+.nameInicio{
+font-style: oblique;
+font-family: mountains;
+  font-size: 150%;
+}
+
+.letraTitulo{
+  font-family: mountains;
+  font-style: oblique;
+}
+.texto {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.foster{
+  height: 15vh;
+  background-color: #666;
+}
+
 </style>
