@@ -194,14 +194,16 @@
       <b-button variant="secondary">Bautizos</b-button>
   </b-card>
 </div>
+ <div id="app">
+        <image-wall></image-wall>
+    </div>
 </div>
 </template>
 <script>
 
-  
 </script>
 
-<style >
+<style scoped >
 .container {
   padding: 40px 80px;
   position: relative;
