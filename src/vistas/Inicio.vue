@@ -138,7 +138,7 @@
       </b-collapse>
     </b-navbar>
   <div>
-  <!--<b-carousel
+  <b-carousel
     id="carousel-fade"
     style="text-shadow: 1px 1px 2px #333;"
       controls
@@ -153,12 +153,12 @@
     >
     <b-carousel-slide caption="First slide" class="ImgTamaño" :img-src="require('../assets/Imagen 1.jpg')"/>
     <b-carousel-slide caption="Second Slide" class="ImgTamaño" :img-src="require('../assets/Imagen2.png')"/>
-    <b-carousel-slide caption="Third Slide" class="ImgTamaño" :img-src="require('../assets/Imagen 3.jpg')"/>
+    <b-carousel-slide caption="Third Slide" class="ImgTamaño" :img-src="require('../assets/imagen 3.jpg')"/>
     <b-carousel-slide caption="Four slide" class="ImgTamaño" :img-src="require('../assets/Imagen4.png')"/>
     <b-carousel-slide caption="Five Slide" class="ImgTamaño" :img-src="require('../assets/Imagen 7.jpg')"/>
-    <b-carousel-slide caption="Six Slide" class="ImgTamaño" :img-src="require('../assets/Imagen 6.jpg')"/>
+    <b-carousel-slide caption="Six Slide" class="ImgTamaño" :img-src="require('../assets/imagen 6.jpg')"/>
     <b-carousel-slide caption="Seven Slide" class="ImgTamaño" :img-src="require('../assets/Imagen5.png')"/>
-  </b-carousel>-->
+  </b-carousel>
 </div>
 <div>
 
@@ -298,7 +298,7 @@ font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 .foster{
   height: 15vh;
-  background-color: #666;
+  background-color: #2C3134;
 }
 
 </style>
