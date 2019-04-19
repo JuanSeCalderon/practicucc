@@ -175,47 +175,57 @@ Cuenta con un equipo profesional y muy bien formado para garantizar un servicio 
  <hr style="color: black;" noshade="noshade" width="100%"/>
 
   <div class="mt-4">
-    <h2 class="letraTitulo" >Calidad y servicios</h2>
-    <b-card :img-src="require('../assets/fiestaa.png')" img-alt="Card image" img-left class="mb-3" footer-text-variant>
-      <b-card-text class="texto" >
-      Podemos ayudarlos con cualquier fiesta que vaya a organizar, ajustándonos a sus gustos y presupuestos, siempre asistidos por un equipo profesional que está a disposición 24/7 para nuestros clientes.
-</b-card-text>
-<ul align="left" class="texto">
+<b-card :img-src="require('../assets/fiestaa.png')" img-alt="Card image" img-left class="mb-3">
+      <b-card-text class="texto">
+<div class="contenedor-img efectRosa">      
+        Podemos ayudarlos con cualquier fiesta que vaya a organizar, ajustándonos a sus gustos y presupuestos, siempre asistidos por un equipo profesional que está a disposición 24/7 para nuestros clientes.
+      <div class="mascara">  
+         <ul align="left" class="texto">
 <li type="square">Bautizos</li>
 <li type="square">Baby Showers</li>
 <li type="square">Comuniones</li>
 <li type="square">Cumpleaños</li>
 <li type="square">Fiestas temáticas</li>
-</ul>
+</ul>  
+     </div>  
+</div>
+</b-card-text> 
+
+
     </b-card>
 
     <b-card :img-src="require('../assets/empresa.png')" img-alt="Card image" img-right class="mb-3">
       <b-card-text class="texto">
+<div class="contenedor-img efectRosa">      
         Ofrecemos un servicio completo de organización tanto integral como parcial de todo lo necesario para este servicio
-        
-      </b-card-text>
-   <ul align="left" class="texto">
+      <div class="mascara">  
+         <ul align="left" class="texto">
 <li type="square">Material audiovisual y técnico</li>
 <li type="square">Restauración</li>
 <li type="square">Meseros</li>
 <li type="square">Buffe</li>
 <li type="square">Eventos coporativos</li>
-</ul> 
+</ul>  
+     </div>  
+</div>  
+      </b-card-text> 
     </b-card>
 
     <b-card :img-src="require('../assets/recordatorio.png')" img-alt="Card image" img-left class="mb-4">
       <b-card-text class="texto">
+      <div class="contenedor-img efectRosa">  
         El primer paso está claro y la decisión tomada. A partir de este momento, las dudas y dificultades aparecen al enfrentaros a un tema ajeno a nosotros.
-Queremos ofrecerles la ayuda necesaria para facilitar todos los pasos a seguir y conseguir captar la idea que tienes en mente para plasmarla el mejor momento de dicho recuerdo.
+Queremos ofrecerles la ayuda necesaria para facilitar todos los pasos a seguir y conseguir captar la idea que tienes en mente para plasmar el mejor momento de dicho recuerdo.
 Ofrecemos nuestro servicio más completo para que partamos del punto que sea donde se encuentre dichos sentimientos y podamos crearla junto a ustedes de manera única y perfecta.
-
-      </b-card-text>
+<div class="mascara">  
+      
    <ul align="left" class="texto">
 <li type="square">Aniversarios</li>
 <li type="square">Graduaciones</li>
 <li type="square">Jubilaciones</li>
 <li type="square">Bodas</li>
-</ul> 
+</ul></div>  
+</div></b-card-text>
     </b-card>
   </div>
  <hr style="color: black;" noshade="noshade" width="100%"/>
@@ -284,10 +294,14 @@ Aqui viene el pie de pagina
 font-family: Century Gothic, sans-serif;
 }
 .nameInicio{
-font-style: oblique;
-font-family: mountains;
-  font-size: 150%;
+text-align: left; 
+font-family: Comic Sans MS; 
+font-weight:bold; 
+font-size: 30px; 
+color: #ffc1d3; 
+text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
 }
+
 
 .letraTitulo{
   font-family: mountains;
@@ -301,4 +315,47 @@ font-family: Verdana, Arial, Helvetica, sans-serif;
   background-color: #2C3134;
 }
 
+
+.efectRosa img {
+transition: all 0.2s linear;
+}
+.efectRosa .mascara {
+opacity: 0;
+background-color: #ffc1d3;
+transition: all 0.3s ease-in-out;
+}
+.efectRosa h2 {
+transform: translateX(-200px);
+opacity: 0;
+transition: all 0.7s ease-in-out;
+}
+.efectRosa p {
+transform: translateX(230px);
+opacity: 0;
+transition: all 0.4s linear;
+}
+.efectRosa a.link{
+opacity: 0;
+transition: all 0.4s ease-in-out;
+transform: translateY(230px)
+}
+.efectRosa:hover img {
+transform: scale(1.1);
+}
+.efectRosa:hover .mascara {
+opacity: 1;
+}
+.efectRosa:hover h2,
+.efectRosa:hover p,
+.efectRosa:hover a.link {
+opacity: 1;
+transform: translateX(0px);
+}
+.efectRosa:hover p {
+transition-delay: 0.1s;
+}
+.efectRosa:hover a.link {
+transition-delay: 0.2s; 
+transform: translateY(0px);
+}
 </style>
