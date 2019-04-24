@@ -8,9 +8,9 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item :to="{name:'Eventos'}" > </b-nav-item>
-          <b-nav-item :to="{name:'Eventos'}" class="nameroute" >Eventos</b-nav-item>
-          <b-nav-item :to="{name:'Galeria'}" class="nameroute" >Galeria</b-nav-item>
-          <b-nav-item :to="{name:'Contacto'}" class="nameroute" >Contacto</b-nav-item>
+          <b-nav-item :to="{name:'Eventos'}" class="nameroute" ><strong class="s1">/</strong>Eventos</b-nav-item>
+          <b-nav-item :to="{name:'Galeria'}" class="nameroute" ><strong  class="s2">/</strong>Galeria</b-nav-item>
+          <b-nav-item :to="{name:'Contacto'}" class="nameroute" ><strong  class="s3">/</strong>Contacto</b-nav-item>
           
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
@@ -172,7 +172,40 @@ Cuenta con un equipo profesional y muy bien formado para garantizar un servicio 
 
  <b-nav-item :to="{name:'Contacto'}" ><b-button variant="outline-info" class="letraTitulo" >Contactanos ya!</b-button></b-nav-item>
 <br>
- <hr style="color: black;" noshade="noshade" width="100%"/>
+
+
+
+<div>
+  <b-card
+    overlay
+    :img-src="require('../assets/fiestaa.png')"
+    class="mb-3"
+    img-alt="Card Image"
+    text-variant="white"
+    title="Fiesta"
+  >
+     <b-card-text class="texto">
+<div class="contenedor-img efectRosa">      
+        Podemos ayudarlos con cualquier fiesta que vaya a organizar, ajustándonos a sus gustos y presupuestos, siempre asistidos por un equipo profesional que está a disposición 24/7 para nuestros clientes.
+      <div class="mascara">  
+         <ul align="left" class="texto">
+<li type="square">Bautizos</li>
+<li type="square">Baby Showers</li>
+<li type="square">Comuniones</li>
+<li type="square">Cumpleaños</li>
+<li type="square">Fiestas temáticas</li>
+</ul>  
+     </div>  
+</div>
+</b-card-text> 
+
+
+    </b-card>
+</div>
+
+
+
+
 
   <div class="mt-4">
 <b-card :img-src="require('../assets/fiestaa.png')" img-alt="Card image" img-left class="mb-3">
@@ -284,7 +317,7 @@ Aqui viene el pie de pagina
 
 }
 .mb-3{
-  height: 230px;
+  height: 250px;
   
 }
 .mb-4{
@@ -292,6 +325,7 @@ Aqui viene el pie de pagina
 }
 .nameroute {
 font-family: Century Gothic, sans-serif;
+
 }
 .nameInicio{
 text-align: left; 
@@ -357,5 +391,18 @@ transition-delay: 0.1s;
 .efectRosa:hover a.link {
 transition-delay: 0.2s; 
 transform: translateY(0px);
+}
+.s1 {
+  color: #80C9D8;
+  font: bold 200% monospace;
+
+}
+.s2 {
+  color: #D880CC;
+  font: bold 200% monospace;
+}
+.s3 {
+  color: #74E715;
+  font: bold 200% monospace;
 }
 </style>
