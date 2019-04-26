@@ -1,142 +1,5 @@
 <template>  
-
 <div>
-<b-navbar class="navbar fixed-top" toggleable="md" type="dark" variant="dark">
-      <b-navbar-toggle target="nav_collapse"/>
-      <b-navbar-brand :to="{name:'Inicio'}" id="logo" class="nameInicio"> Casa Logieventos</b-navbar-brand>
-
-      <b-collapse is-nav id="nav_collapse">
-        <b-navbar-nav>
-          <b-nav-item :to="{name:'Eventos'}" > </b-nav-item>
-          <b-nav-item :to="{name:'Eventos'}" class="nameroute" ><strong class="s1">/</strong>Eventos</b-nav-item>
-          <b-nav-item :to="{name:'Galeria'}" class="nameroute" ><strong  class="s2">/</strong>Galeria</b-nav-item>
-          <b-nav-item :to="{name:'Contacto'}" class="nameroute" ><strong  class="s3">/</strong>Contacto</b-nav-item>
-          
-        </b-navbar-nav>
-        <b-navbar-nav class="ml-auto">
-           <b-collapse is-nav class="nav_collapse">
-            <a href="https://www.facebook.com/bodaslogieventos/" target="_blank"><img alt="FanPage Casa Logieventos" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=32 height=32  /></a>&nbsp;&nbsp;&nbsp;
-            <a href="https://www.instagram.com/logieventos/?hl=es-la" target="_blank"><img alt="Insta Casa Logieventos" src="https://lh5.googleusercontent.com/-2cd4qn_7yDs/UIqEfqncDaI/AAAAAAAABfw/qhUaWfiH7DU/s32/instagram32.png" width=32 height=32  /></a>&nbsp;&nbsp;&nbsp;
-            <a href="https://api.whatsapp.com/send?phone=573143182893&text=Hola,%20quisiera%20alquilar%20un%20servicio%20de%20eventos" target="_blank"><img alt="Whatsapp Casa Logieventos" src="../assets/WhatsApp.png" width=32 height=32  /></a>&nbsp;&nbsp;
-          
-
-          <b-nav-form>
-            <b-form-input size="sm" class="mr-sm-2 buscarcuadro" type="text" placeholder="Buscar"/>
-            <b-nav-item :to="{name:'Buscar'}" size="sm" class="nameroute">Buscar</b-nav-item>
-              <i class="fas fa-search"></i>
-          </b-nav-form>
-
-<div>
-  <b-button v-b-modal.modal1> <img alt="Login" src="../assets/Login.png" width=32 height=32/></b-button>
-
-  <!-- Modal Component -->
-  <b-modal id="modal1" title="Bienvenido">
-  <div class="d-block text-center">
-                      <h2>Casa Logieventos</h2>
-                      
-                    <!--  <b-card
-                        overlay
-                        :img-src="require('../assets/empresa.png')"
-                      ></b-card>-->
-                    </div>
-        <md-tab md-label="Iniciar sesiòn">
-                        <div>
-                          <b-form @submit.prevent="loginClientes">
-                            <b-input
-                              class="mt-3"
-                              name="email"
-                              type="text"
-                              required
-                              v-model="email"
-                              placeholder="Correo electronico"
-                            />
-                            <b-input
-                              class="mt-3"
-                              name="password"
-                              type="password"
-                              v-model="password"
-                              required
-                              aria-describedby="passwordHelpBlock"
-                              placeholder="Contraseña"
-                            />
-<br>
-    <p align="left" ><input type="checkbox" name="traslado"><label>Recordar usuario</label></p>
-                           
-                            <b-button
-                              class="mt-3 botonModal"
-                              variant="outline-primary"
-                              type="submit"
-                            >Iniciar sesiòn</b-button>
-                          </b-form>
-                        </div>
-                      </md-tab>
-                     <div>
-  <br>
-  <b-button v-b-modal.modal-1 variant="outline-primary">Registrarme</b-button>
-
-  <!-- Modal Component -->
-  <b-modal id="modal-1" title="Se parte de nuestros clientes">
-    <p class="my-4" >Registrate</p>
-    <md-tab md-label="Registro">
-                          <div><b-form @submit.prevent="createClientes">
-                            <b-row class="mt-3">
-                              <b-col>
-                                <b-input name="nombre" type="text" required placeholder="Nombre"/>
-                              </b-col>
-                              <b-col>
-                                <b-input
-                                  name="apellido"
-                                  type="text"
-                                  required
-                                  placeholder="Apellido"
-                                />
-                              </b-col>
-                            </b-row>
-                            <b-row class="mt-3">
-                              <b-col>
-                                <b-input
-                                  name="email"
-                                  type="text"
-                                  required
-                                  placeholder="Correo electronico"
-                                />
-                              </b-col>
-                              <b-col>
-                                <b-input
-                                  name="celular"
-                                  type="tel"
-                                  required
-                                  placeholder="Numero de celular"
-                                />
-                              </b-col>
-                            </b-row>
-
-                            <b-input
-                              class="mt-3"
-                              name="password"
-                              type="password"
-                              aria-describedby="passwordHelpBlock"
-                              required
-                              placeholder="Contraseña"
-                            />
-                            <b-button
-                              class="mt-3 botonModal"
-                              variant="outline-primary"
-                              type="submit"
-                            >Registrarse</b-button>
-                          </b-form>
-                           </div>
-                      </md-tab>
-  </b-modal>
-</div>
-           </b-modal>
-  
-</div>
-             
-          </b-collapse>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
   <div>
   <b-carousel
     id="carousel-fade"
@@ -160,9 +23,7 @@
     <b-carousel-slide caption="Seven Slide" class="ImgTamaño" :img-src="require('../assets/Imagen5.png')"/>
   </b-carousel>
 </div>
-<div>
 
-</div>
  <hr style="color: black;" noshade="noshade" width="100%"/>
  <h2 class="letraTitulo">Una breve Reseña historica</h2>
 <p class="texto" >Casa Logieventos fue fundada en 2007 de la mano de una pareja emprendedora siendo los dueños  Mary Rojas y Jhon Alexander Babativa como empresa pionera de la ciudad de Villavicencio, Meta con especialidad en eventos lucrativos.
@@ -173,59 +34,51 @@ Cuenta con un equipo profesional y muy bien formado para garantizar un servicio 
  <b-nav-item :to="{name:'Contacto'}" ><b-button variant="outline-info" class="letraTitulo" >Contactanos ya!</b-button></b-nav-item>
 <br>
 
-
-
 <div>
-  <b-card
-    overlay
-    :img-src="require('../assets/fiestaa.png')"
-    class="mb-3"
-    img-alt="Card Image"
-    text-variant="white"
-    title="Fiesta"
-  >
-     <b-card-text class="texto">
-<div class="contenedor-img efectRosa">      
-        Podemos ayudarlos con cualquier fiesta que vaya a organizar, ajustándonos a sus gustos y presupuestos, siempre asistidos por un equipo profesional que está a disposición 24/7 para nuestros clientes.
-      <div class="mascara">  
-         <ul align="left" class="texto">
-<li type="square">Bautizos</li>
-<li type="square">Baby Showers</li>
-<li type="square">Comuniones</li>
-<li type="square">Cumpleaños</li>
-<li type="square">Fiestas temáticas</li>
-</ul>  
-     </div>  
+  <b-card no-body class="overflow-hidden" >
+    <b-row no-gutters>
+      <b-col md="6">
+        <b-card :img-src="require('../assets/fiestaa.png')" class="rounded-0 imgCard"></b-card>
+      </b-col>
+      <b-col md="6">
+        <b-card-body title="Horizontal Card">
+          <b-card-text>
+            This is a wider card with supporting text as a natural lead-in to additional content.
+            This content is a little bit longer.
+          </b-card-text>
+        </b-card-body>
+      </b-col>
+    </b-row>
+  </b-card>
 </div>
-</b-card-text> 
 
 
-    </b-card>
-</div>
+
 
 
 
 
 
   <div class="mt-4">
-<b-card :img-src="require('../assets/fiestaa.png')" img-alt="Card image" img-left class="mb-3">
-      <b-card-text class="texto">
-<div class="contenedor-img efectRosa">      
-        Podemos ayudarlos con cualquier fiesta que vaya a organizar, ajustándonos a sus gustos y presupuestos, siempre asistidos por un equipo profesional que está a disposición 24/7 para nuestros clientes.
-      <div class="mascara">  
-         <ul align="left" class="texto">
-<li type="square">Bautizos</li>
-<li type="square">Baby Showers</li>
-<li type="square">Comuniones</li>
-<li type="square">Cumpleaños</li>
-<li type="square">Fiestas temáticas</li>
-</ul>  
-     </div>  
-</div>
-</b-card-text> 
-
-
-    </b-card>
+     
+      <b-card :img-src="require('../assets/fiestaa.png')" img-alt="Card image" img-left class="mb-3">
+    
+          <b-card-text class="texto">
+            <div class="contenedor-img efectRosa">      
+                    Podemos ayudarlos con cualquier fiesta que vaya a organizar, ajustándonos a sus gustos y presupuestos, siempre asistidos por un equipo profesional que está a disposición 24/7 para nuestros clientes.
+                  <div class="mascara">  
+                    <ul align="left" class="texto">
+                      <li type="square">Bautizos</li>
+                      <li type="square">Baby Showers</li>
+                      <li type="square">Comuniones</li>
+                      <li type="square">Cumpleaños</li>
+                      <li type="square">Fiestas temáticas</li>
+                    </ul>  
+                </div>  
+            </div>
+          </b-card-text> 
+         
+  </b-card>
 
     <b-card :img-src="require('../assets/empresa.png')" img-alt="Card image" img-right class="mb-3">
       <b-card-text class="texto">
@@ -284,10 +137,8 @@ Ofrecemos nuestro servicio más completo para que partamos del punto que sea don
   </tr>
 
 </table>
-<div class="foster">
-Aqui viene el pie de pagina 
+
 </div>
- </div> 
 </template>
 
 <script scope>
@@ -344,18 +195,11 @@ text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 
 .texto {
 font-family: Verdana, Arial, Helvetica, sans-serif;
 }
-.foster{
-  height: 15vh;
-  background-color: #2C3134;
-}
-
-
 .efectRosa img {
 transition: all 0.2s linear;
 }
 .efectRosa .mascara {
 opacity: 0;
-background-color: #ffc1d3;
 transition: all 0.3s ease-in-out;
 }
 .efectRosa h2 {
@@ -404,5 +248,8 @@ transform: translateY(0px);
 .s3 {
   color: #74E715;
   font: bold 200% monospace;
+}
+img{
+  padding-bottom: 0;
 }
 </style>

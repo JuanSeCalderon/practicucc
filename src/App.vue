@@ -4,11 +4,16 @@
     <div>
       <router-view />
     </div>
+    <div id="app">
+<foster />
+    </div>
+     
   </div>
 </template>
 
 <script>
-import Menu from "./components/Menu.vue";
+import Menu from "./vistas/Menu.vue";
+import foster from "./vistas/foster.vue";
 
 export default {
   components: {
@@ -16,21 +21,10 @@ export default {
   },
   data() {
     return {
-      usuarios: "",
-      experiencias: [
-        {
-          nombre: "Inicio"
-        },
-        {
-          nombre: "Eventos"
-        },
-        {
-          nombre: "Alquiler"
-        }
-      ]
-    };
+      
+    }
   }
-};
+}
 </script>
 
 <style>
