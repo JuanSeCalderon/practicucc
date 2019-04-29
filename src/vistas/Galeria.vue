@@ -62,18 +62,12 @@
       <b-button variant="secondary">Bautizos</b-button>
   </b-card>
 </div>
- <div id="Galeria">
-        <image-wall>  <h2>Hola</h2>
-        </image-wall>
-    </div>
+ 
 
 </div>
 </template>
 <script>
-import ImageWall from "../components/ImageWall";
-    export default {
-        name: 'Galeria',
-        components: {ImageWall}}
+
 </script>
 
 <style scoped >

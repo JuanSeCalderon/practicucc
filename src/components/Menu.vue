@@ -7,7 +7,7 @@
 
     <router-link style="text-decoration:none" to="/Eventos">
       <p>Eventos</p>
-    </router-link>
+    </router-link> 
     
     <router-link style="text-decoration:none" to="/Galeria">
       <p>Galeria</p>
