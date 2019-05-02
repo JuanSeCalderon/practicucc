@@ -1,7 +1,10 @@
 <template>
     <div>
   <div id="Appa">
-  <b-card-group deck class="container">
+  <center>
+  <table>
+  <tr>
+  <td>
   <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerFront1}} </div>
             <div class="card-content center">
@@ -20,7 +23,8 @@
             </div>
             <div class="card-footer">{{footerBack}}</div>
         </div>
-
+</td>
+<td>
         <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
             <div class="card-header2" style="padding-bottom: 15px;"> {{headerFront2}} </div>
             <div class="card-content center">
@@ -39,7 +43,10 @@
             </div>
             <div class="card-footer">{{footerBack}}</div>
         </div>
-</b-card-group>
+        </td>
+</tr>
+<tr>
+<td>
         <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
             <div class="card-header3" style="padding-bottom: 15px;"> {{headerFront3}} </div>
             <div class="card-content center">
@@ -48,7 +55,6 @@
             </div>
             <div class="card-footer">{{footerFront}}</div>
         </div>
-
         
         <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerBack3}}</div>
@@ -58,7 +64,8 @@
             </div>
             <div class="card-footer">{{footerBack}}</div>
         </div>
-
+</td>
+<td>
         <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerFront4}} </div>
             <div class="card-content center">
@@ -77,7 +84,10 @@
             </div>
             <div class="card-footer">{{footerBack}}</div>
         </div>
-
+        </td>
+</tr>
+<tr>
+<td>
         <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerFront5}} </div>
             <div class="card-content center">
@@ -96,7 +106,8 @@
             </div>
             <div class="card-footer">{{footerBack}}</div>
         </div>
-
+</td>
+<td>
  <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerFront6}} </div>
             <div class="card-content center">
@@ -115,11 +126,13 @@
             </div>
             <div class="card-footer">{{footerBack}}</div>
         </div>
+        </td>
+        </tr>
+        </table>
+        </center>
   </div>      
 </div>
 </template>
-
-
 <script>
 export default {
  
@@ -231,7 +244,7 @@ export default {
         },
          headerBack5: {
             type: String,
-            default: ''
+            default: 'Cuando uno decide una carrera sabe que tiene que dedicar años de su vida en estudiar y que esto viene también de grandes sacrificios. Casa LogiEventos eventos quiere ofrecerte un servicio en el que ustedes como graduados se sientan satisfechos y orgullosos de sí mismos'
         },
          headerBack6: {
             type: String,
@@ -239,7 +252,7 @@ export default {
         },
         footerBack: {
             type: String,
-            default: 'Click to show Front'
+            default: 'Ver Mas '
         }
 
 
@@ -308,8 +321,4 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
-
-
-
-
 </style>

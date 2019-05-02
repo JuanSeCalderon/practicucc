@@ -15,7 +15,7 @@
   <b-card 
     overlay
     img-src="http://maneltamayo.com/wp-content/uploads/2015/11/boda-michelle-bradley-novios-pose-manel-tamayo-fotogrago-bodas.jpg"
-    img-alt="Card Image"
+    img-alt="Card Image"npm i vue-glide-js
     
   >
       <b-button variant="secondary">Bodas</b-button>
