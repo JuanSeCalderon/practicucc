@@ -1,5 +1,7 @@
 <template>  
-
+<html>
+  <head></head>
+  <body>
 <div>
 <b-navbar class="navbar fixed-top" toggleable="md" type="dark" variant="dark">
       <b-navbar-toggle target="nav_collapse"/>
@@ -11,6 +13,7 @@
           <b-nav-item :to="{name:'Eventos'}" class="nameroute" ><strong class="s1">/</strong>Eventos</b-nav-item>
           <b-nav-item :to="{name:'Galeria'}" class="nameroute" ><strong  class="s2">/</strong>Galeria</b-nav-item>
           <b-nav-item :to="{name:'Contacto'}" class="nameroute" ><strong  class="s3">/</strong>Contacto</b-nav-item>
+          
           
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
@@ -139,10 +142,19 @@
     </b-navbar>
 
   
-</div>
+</div></body>
+</html>
     </template>
 
 <style scoped>
+
+template{
+  background-image: url("../assets/fondo.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  border: transparent;
+}
+
 .ImgTamaño {
   height: 590px;
 

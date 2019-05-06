@@ -14,13 +14,13 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-    <b-carousel-slide caption="First slide" class="ImgTamaño" :img-src="require('../assets/Imagen 1.jpg')"/>
-    <b-carousel-slide caption="Second Slide" class="ImgTamaño" :img-src="require('../assets/Imagen2.png')"/>
-    <b-carousel-slide caption="Third Slide" class="ImgTamaño" :img-src="require('../assets/imagen 3.jpg')"/>
-    <b-carousel-slide caption="Four slide" class="ImgTamaño" :img-src="require('../assets/Imagen4.png')"/>
-    <b-carousel-slide caption="Five Slide" class="ImgTamaño" :img-src="require('../assets/Imagen 7.jpg')"/>
-    <b-carousel-slide caption="Six Slide" class="ImgTamaño" :img-src="require('../assets/imagen 6.jpg')"/>
-    <b-carousel-slide caption="Seven Slide" class="ImgTamaño" :img-src="require('../assets/Imagen5.png')"/>
+    <b-carousel-slide caption="" class="ImgTamaño" :img-src="require('../assets/Imagen 1.jpg')"/>
+    <b-carousel-slide caption="" class="ImgTamaño" :img-src="require('../assets/Imagen2.png')"/>
+    <b-carousel-slide caption="" class="ImgTamaño" :img-src="require('../assets/imagen 3.jpg')"/>
+    <b-carousel-slide caption="" class="ImgTamaño" :img-src="require('../assets/Imagen4.png')"/>
+    <b-carousel-slide caption="" class="ImgTamaño" :img-src="require('../assets/Imagen 7.jpg')"/>
+    <b-carousel-slide caption="" class="ImgTamaño" :img-src="require('../assets/imagen 6.jpg')"/>
+    <b-carousel-slide caption="" class="ImgTamaño" :img-src="require('../assets/Imagen5.png')"/>
   </b-carousel>
 </div>
 
@@ -31,89 +31,98 @@
 Cuenta con un equipo profesional y muy bien formado para garantizar un servicio de calidad a la altura del evento. </p>
 <p>Somos perfeccionistas, cercanos y detallistas. Nos gustan las cosas bien hechas y sobre todo; hechas con amor, por lo que dejamos la huella de satisfacción en cada evento para conseguir la felicidad máxima de nuestros clientes.</p>
 
- <b-nav-item :to="{name:'Contacto'}" ><b-button variant="outline-info" class="letraTitulo" >Contactanos ya!</b-button></b-nav-item>
+ <b-nav-item :to="{name:'Contacto'}" ><b-button variant="outline-info" class="botones" :to="{name:'cotizacion'}" >Contactanos ya!</b-button></b-nav-item>
 <br>
 
-<div>
-  <b-card no-body class="overflow-hidden" >
-    <b-row no-gutters>
-      <b-col md="6">
-        <b-card :img-src="require('../assets/fiestaa.png')" class="rounded-0 imgCard"></b-card>
-      </b-col>
-      <b-col md="6">
-        <b-card-body title="Horizontal Card">
-          <b-card-text>
-            This is a wider card with supporting text as a natural lead-in to additional content.
-            This content is a little bit longer.
-          </b-card-text>
-        </b-card-body>
-      </b-col>
-    </b-row>
-  </b-card>
-</div>
-
-
-
-
-
-
-
-
-  <div class="mt-4">
-     
-      <b-card :img-src="require('../assets/fiestaa.png')" img-alt="Card image" img-left class="mb-3">
-    
-          <b-card-text class="texto">
-            <div class="contenedor-img efectRosa">      
-                    Podemos ayudarlos con cualquier fiesta que vaya a organizar, ajustándonos a sus gustos y presupuestos, siempre asistidos por un equipo profesional que está a disposición 24/7 para nuestros clientes.
-                  <div class="mascara">  
+<hr class="featurette-divider">
+<div class="bg-info text-white" style="font-family: mountains font-style: oblique"><br>
+  <h2><i>Recreación</i></h2>
+        <div class="texto">
+          <div class="col-md-5">
+           <!-- <img class="mb-3" src="../assets/fiesta.jpg" alt="Generic placeholder image">-->
+          </div>
+          
+          <div class="contenedor-img efectRosa bg-info text-white">
+            
+            <h2 class="featurette-heading">Fiestas</h2>
+            <p class="bg-info text-white">Podemos ayudarlos con cualquier fiesta que vaya a organizar, ajustándonos a sus gustos y presupuestos, siempre asistidos por un equipo profesional que está a disposición 24/7 para nuestros clientes.</p>
+          <div class="mascara">  
                     <ul align="left" class="texto">
                       <li type="square">Bautizos</li>
                       <li type="square">Baby Showers</li>
                       <li type="square">Comuniones</li>
                       <li type="square">Cumpleaños</li>
-                      <li type="square">Fiestas temáticas</li>
+                      <li type="square">Fiestas temáticas</li> 
                     </ul>  
-                </div>  
-            </div>
-          </b-card-text> 
-         
-  </b-card>
+                </div>
+          </div> <div><b-button variant = "dark" class="botones" :to="{name:'Eventos'}" >Ver más</b-button>
+          <br></div>
+        </div>
+</div>
+        <hr class="featurette-divider">
 
-    <b-card :img-src="require('../assets/empresa.png')" img-alt="Card image" img-right class="mb-3">
-      <b-card-text class="texto">
-<div class="contenedor-img efectRosa">      
-        Ofrecemos un servicio completo de organización tanto integral como parcial de todo lo necesario para este servicio
-      <div class="mascara">  
-         <ul align="left" class="texto">
+
+
+<hr class="featurette-divider">
+<div class="bg-info text-white" style="font-family: mountains font-style: oblique"><br>
+  <h2><i>Glamour</i></h2>
+        <div class="texto">
+          <div class="col-md-5">
+           <!-- <img class="mb-3" src="../assets/fiesta.jpg" alt="Generic placeholder image">-->
+          </div>
+          
+          <div class="contenedor-img efectRosa bg-danger text-white">
+            
+            <h2 class="featurette-heading">Ejecutivo</h2>
+            <p class="bg-danger text-white">Ofrecemos un servicio completo de organización tanto integral como parcial de todo lo necesario para este servicio.</p>
+          <div class="mascara">  
+                     <ul align="left" class="texto">
 <li type="square">Material audiovisual y técnico</li>
 <li type="square">Restauración</li>
 <li type="square">Meseros</li>
 <li type="square">Buffe</li>
 <li type="square">Eventos coporativos</li>
-</ul>  
-     </div>  
-</div>  
-      </b-card-text> 
-    </b-card>
+</ul>   
+                </div>
+          </div> <div><b-button variant = "secondary" class="botones" :to="{name:'Eventos'}" >Ver más</b-button>
+          <br></div>
+        </div>
+</div>
+        <hr class="featurette-divider">
 
-    <b-card :img-src="require('../assets/recordatorio.png')" img-alt="Card image" img-left class="mb-4">
-      <b-card-text class="texto">
-      <div class="contenedor-img efectRosa">  
-        El primer paso está claro y la decisión tomada. A partir de este momento, las dudas y dificultades aparecen al enfrentaros a un tema ajeno a nosotros.
-Queremos ofrecerles la ayuda necesaria para facilitar todos los pasos a seguir y conseguir captar la idea que tienes en mente para plasmar el mejor momento de dicho recuerdo.
+
+
+
+<hr class="featurette-divider">
+<div class="bg-dark text-white" style="font-family: mountains font-style: oblique"><br>
+  <h2><i>Momentos</i></h2>
+        <div class="texto">
+          <div class="col-md-5">
+           <!-- <img class="mb-3" src="../assets/fiesta.jpg" alt="Generic placeholder image">-->
+          </div>
+          
+          <div class="contenedor-img efectRosa bg-dark text-white">
+            
+            <h2 class="featurette-heading">Recordar es vivir</h2>
+            <p class="bg-dark text-white">Queremos ofrecerles la ayuda necesaria para facilitar todos los pasos a seguir y conseguir captar la idea que tienes en mente para plasmar el mejor momento de dicho recuerdo.
 Ofrecemos nuestro servicio más completo para que partamos del punto que sea donde se encuentre dichos sentimientos y podamos crearla junto a ustedes de manera única y perfecta.
-<div class="mascara">  
-      
-   <ul align="left" class="texto">
+</p>
+          <div class="mascara">  
+                      <ul align="left" class="texto">
 <li type="square">Aniversarios</li>
 <li type="square">Graduaciones</li>
 <li type="square">Jubilaciones</li>
 <li type="square">Bodas</li>
-</ul></div>  
-</div></b-card-text>
-    </b-card>
-  </div>
+</ul>   
+                </div>
+          </div> <div><b-button variant = "info" class="botones" :to="{name:'Eventos'}" >Ver más</b-button>
+          <br></div>
+        </div>
+</div>
+        <hr class="featurette-divider">
+
+
+
  <hr style="color: black;" noshade="noshade" width="100%"/>
  <br>
  <h2 align="center" class="letraTitulo">Actividades realizadas</h2>
@@ -168,9 +177,10 @@ Ofrecemos nuestro servicio más completo para que partamos del punto que sea don
 
 }
 .mb-3{
-  height: 250px;
-  
+  height: 100px;
+  width: 1200px;
 }
+
 .mb-4{
   height: 235px;
 }
@@ -187,7 +197,9 @@ color: #ffc1d3;
 text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
 }
 
-
+.botones{
+  cursor:pointer;
+}
 .letraTitulo{
   font-family: mountains;
   font-style: oblique;
