@@ -5,7 +5,7 @@
   <table>
   <tr>
   <td>
-  <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
+  <div @click="isToggle1=!isToggle1" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle1" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerFront1}} </div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeFront,fontWeight: 'bold'}">{{front}}</p>
@@ -15,7 +15,7 @@
         </div>
 
         
-        <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle" class="animated flipInX flashcard">
+        <div @click="isToggle1=!isToggle1" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle1" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerBack1}}</div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeBack, fontWeight: 'bold'}">{{back}}</p>
@@ -25,7 +25,7 @@
         </div>
 </td>
 <td>
-        <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
+        <div @click="isToggle2=!isToggle2" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle2" class="animated flipInX flashcard">
             <div class="card-header2" style="padding-bottom: 15px;"> {{headerFront2}} </div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeFront,fontWeight: 'bold'}">{{front}}</p>
@@ -35,7 +35,7 @@
         </div>
 
         
-        <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle" class="animated flipInX flashcard">
+        <div @click="isToggle2=!isToggle2" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle2" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerBack2}}</div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeBack, fontWeight: 'bold'}">{{back}}</p>
@@ -47,7 +47,7 @@
 </tr>
 <tr>
 <td>
-        <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
+        <div @click="isToggle3=!isToggle3" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle3" class="animated flipInX flashcard">
             <div class="card-header3" style="padding-bottom: 15px;"> {{headerFront3}} </div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeFront,fontWeight: 'bold'}">{{front}}</p>
@@ -56,7 +56,7 @@
             <div class="card-footer">{{footerFront}}</div>
         </div>
         
-        <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle" class="animated flipInX flashcard">
+        <div @click="isToggle3=!isToggle3" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle3" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerBack3}}</div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeBack, fontWeight: 'bold'}">{{back}}</p>
@@ -66,7 +66,7 @@
         </div>
 </td>
 <td>
-        <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
+        <div @click="isToggle4=!isToggle4" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle4" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerFront4}} </div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeFront,fontWeight: 'bold'}">{{front}}</p>
@@ -76,7 +76,7 @@
         </div>
 
         
-        <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle" class="animated flipInX flashcard">
+        <div @click="isToggle4=!isToggle4" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle4" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerBack4}}</div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeBack, fontWeight: 'bold'}">{{back}}</p>
@@ -88,7 +88,7 @@
 </tr>
 <tr>
 <td>
-        <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
+        <div @click="isToggle5=!isToggle5" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle5" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerFront5}} </div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeFront,fontWeight: 'bold'}">{{front}}</p>
@@ -98,7 +98,7 @@
         </div>
 
         
-        <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle" class="animated flipInX flashcard">
+        <div @click="isToggle5=!isToggle5" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle5" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerBack5}}</div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeBack, fontWeight: 'bold'}">{{back}}</p>
@@ -108,7 +108,7 @@
         </div>
 </td>
 <td>
- <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle" class="animated flipInX flashcard">
+ <div @click="isToggle6=!isToggle6" v-bind:style="{backgroundColor: colorFront, color: colorTextFront}" v-show="!isToggle6" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerFront6}} </div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeFront,fontWeight: 'bold'}">{{front}}</p>
@@ -118,7 +118,7 @@
         </div>
 
         
-        <div @click="isToggle=!isToggle" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle" class="animated flipInX flashcard">
+        <div @click="isToggle6=!isToggle6" v-bind:style="{backgroundColor: colorBack, color: colorTextBack}" v-show="isToggle6" class="animated flipInX flashcard">
             <div class="card-header" style="padding-bottom: 15px;"> {{headerBack6}}</div>
             <div class="card-content center">
                 <p v-bind:style="{fontSize: textSizeBack, fontWeight: 'bold'}">{{back}}</p>
@@ -138,7 +138,12 @@ export default {
  
     data() {
         return {
-            isToggle: false,
+            isToggle1: false,
+            isToggle2: false,
+            isToggle3: false,
+            isToggle4: false,
+            isToggle5: false,
+            isToggle6: false,
         }
     }, props: {
         imgFront1: {
@@ -240,7 +245,7 @@ export default {
         },
          headerBack4: {
             type: String,
-            default: ''
+            default: 'Casa LogiEventos te invita a que celebremos todos juntos este sacramento de Dios, y vamos a invitar a toda la familia, ya que son ellos los que acompañan y comparten la vida de tu hijo(a).'
         },
          headerBack5: {
             type: String,
@@ -248,7 +253,7 @@ export default {
         },
          headerBack6: {
             type: String,
-            default: ''
+            default: 'Casa LogiEventos quiere hacer parte de la que quizas sea tu primera fiesta, o tal vez no, lo unico que estoy seguro es que te acompañar las personas mas lindas de este mundo, tus papitos y toda tu familia, y lo mejor de todo es que lo hacen con la bendición de Dios'
         },
         footerBack: {
             type: String,
