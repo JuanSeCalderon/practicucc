@@ -78,59 +78,70 @@
   <b-button v-b-modal.modal-1 variant="outline-primary">Registrarme</b-button>
 
   <!-- Modal Component -->
+  <form ref="from"  lazy-validation
+  @submit.prevent="RegistroCliente">
   <b-modal id="modal-1" title="Se parte de nuestros clientes">
-    <p class="my-4" >Registrate</p>
+    <p clasnos="my-4" >Registrate</p>
     <md-tab md-label="Registro">
-                          <div><b-form @submit.prevent="createClientes">
+                          <div><b-form @submit.prevent="RegistrarCliente" ref="form">
                             <b-row class="mt-3">
                               <b-col>
-                                <b-input name="nombre" type="text" required placeholder="Nombre"/>
+                                <b-input name="Nombre" 
+                                type="text" 
+                                required placeholder="Nombre"
+                                v-model="Nombre"
+                                />
                               </b-col>
                               <b-col>
                                 <b-input
-                                  name="apellido"
+                                  name="Apellido"
                                   type="text"
                                   required
                                   placeholder="Apellido"
+                                  v-model="Apellido"
                                 />
                               </b-col>
                             </b-row>
                             <b-row class="mt-3">
                               <b-col>
                                 <b-input
-                                  name="email"
+                                  name="Email"
                                   type="text"
                                   required
                                   placeholder="Correo electronico"
-                                />
+                                  v-model="Email" 
+                               />
                               </b-col>
                               <b-col>
                                 <b-input
-                                  name="celular"
+                                  name="Cel"
                                   type="tel"
                                   required
                                   placeholder="Numero de celular"
+                                  v-model="Cel"
                                 />
                               </b-col>
                             </b-row>
 
                             <b-input
                               class="mt-3"
-                              name="password"
+                              name="Contra"
                               type="password"
                               aria-describedby="passwordHelpBlock"
                               required
                               placeholder="Contraseña"
+                              v-model="Contra"
                             />
                             <b-button
                               class="mt-3 botonModal"
                               variant="outline-primary"
                               type="submit"
+                             
                             >Registrarse</b-button>
                           </b-form>
                            </div>
                       </md-tab>
-  </b-modal>
+  </b-modal></form>
 </div>
            </b-modal>
   
@@ -248,3 +259,88 @@ transform: translateY(0px);
   font: bold 200% monospace;
 }
 </style>
+
+<script>
+import axios from 'axios'
+export default {
+  data(){
+    return {
+      nombreRegister: " ",
+      apellidoRegister: " ",
+      emailRegister: "",
+      telefonoRegister:"",
+      contrasenaRegister:"",
+      errorMessage: '',
+      successMessage: '',
+      Nombre: "",
+      NombreRules: [
+        v => !!v || "El nombre es obligatorio"
+      ],
+      Apellido: "",
+      ApellidoRules: [
+        v => !!v || "El apellido es obligatorio"
+      ],
+      email: "",
+      emailRules: [
+        v => !!v || "El Email es obligatorio",
+        v => /.+@.+/.test(v)||"Email invalido"
+      ],
+      show1: false,
+      password: '',
+      rules: {
+        required: value => !!value || 'La contraseña es obligatoria',
+        min: v => v.length >= 8|| 'Minimo 8 digitos',
+        emailMatch: () => ('El correo electronico y la contraseña ')
+
+      },
+  check: ''
+    };
+  },
+
+  methods: {
+    registrarUsuario(){
+      console.log(this.nombreRegister)
+    },
+    redirect(ruta){
+      this.$router.push(ruta);
+    },
+    validate(){
+      if(this.$refs.form.validate()){
+        this.snackbar = true;
+      } else {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000
+        });
+        Toast.fire({
+          type:"Error",
+          title:"Llenar todos los campos"
+        });
+      }
+    },
+    setMessages(res){
+      if (res.data.error){
+        this.errorMessage = res.data.message;
+      } else {
+        this.successMessage = res.data.message;
+      }
+      setTimeout (() => {
+        this.errorMessage = false;
+        this.successMessage = false;
+      }, 2000);
+    },
+
+    RegistrarCliente (e){
+      axios
+      .post (
+        "http://localhost/practicucc-master/src/vistas/Registro.php?action=create",
+        new FormData(e.target)
+      ).then(res =>{
+        this.setMessages(res)
+      });
+    }
+  },
+ };  
+</script>

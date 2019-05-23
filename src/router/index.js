@@ -8,7 +8,7 @@ import Inicio from '../vistas/Inicio';
 import Contacto from '../vistas/Contacto';
 import Eventos from '../vistas/Eventos';
 import Galeria from '../vistas/Galeria';
-//import cotizacion from '../vistas/cotizacion';
+import cotizacion from '../vistas/cotizacion';
 
 Vue.use(Router);
 
@@ -33,11 +33,11 @@ export default new Router({
 			path: '/Galeria',
 			name: 'Galeria',
 			component: Galeria
+		},
+		{
+			path: '/cotizacion',
+			name: 'cotizacion',
+			component: cotizacion
 		}
-		//	{
-		//path: '/cotizacion',
-		//	name: 'cotizacion',
-		//	component: Galeria
-		//	}
 	]
 });
